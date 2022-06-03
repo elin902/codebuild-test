@@ -1,0 +1,22 @@
+{% extends "learnify_app/base.html" %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+  <h2>Delete entry?</h2>
+  <small><a href="{% url 'learnify_app:topic' topic.id %}">Back to: {{ topic }}</a></small>
+{% endblock page_header %}
+
+{% block content %}
+    <form action="{% url 'learnify_app:delete_entry' entry.id %}" method="post">
+    {% csrf_token %}
+
+    {% buttons %}
+    <button name="submit" class="btn btn-primary">Delete</button>
+    {% endbuttons %}
+
+    <input type="hidden" name="next"
+    value="{% url 'learnify_app:index' %}" />
+
+    </form>
+
+{% endblock content %}

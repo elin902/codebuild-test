@@ -1,0 +1,17 @@
+{% extends "learnify_app/base.html" %}
+{% block page_header %}
+  <h1>Topics</h1>
+{% endblock page_header %}
+{% block content %}
+  <ul>
+    {% for topic in topics %}
+      <li><h3>
+        <a href="{% url 'learnify_app:topic' topic.id %}">{{ topic }}</a>
+      </h3></li>
+    {% empty %}
+      <li><h3>No topic has been submitted yet.</h3></li>
+    {% endfor %}
+  </ul>
+
+  <h3><a href="{% url 'learnify_app:new_topic' %}">Add new topic</h3>
+{% endblock content %}

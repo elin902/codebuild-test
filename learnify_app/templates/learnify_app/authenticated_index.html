@@ -1,0 +1,9 @@
+{% extends "learnify_app/base.html" %}
+{% block page_header %}
+
+    <div class='jumbotron'>
+        <h3 class="display-3"><center>What have you learned today?</center></h3>
+        <p class="lead"><center></center></p>
+        <center><a class="nav-link" href="{% url 'learnify_app:topics'%}">Add a new topic or contribute an entry</a></center>
+    </div>
+{% endblock page_header %}
