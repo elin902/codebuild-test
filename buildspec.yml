@@ -10,9 +10,15 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t 680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test .
-      - docker tag 680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test 680696743786.dkr.ecr.eu-west-1.amazonaws.com/680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test      
+      - docker tag 680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test 680696743786.dkr.ecr.eu-west-1.amazonaws.com/latest   
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 680696743786.dkr.ecr.eu-west-1.amazonaws.com/680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test
+      - docker push 680696743786.dkr.ecr.eu-west-1.amazonaws.com/codebuild-test
+
+
+
+
+
+
