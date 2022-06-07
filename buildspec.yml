@@ -20,10 +20,10 @@ phases:
       - echo Pushing the Docker image...
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-#      - echo Writing image definitions file...
-#      - printf '[{"name”:"__ECS_CONTAINER_NAME__","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-# artifacts:
-#  files: imagedefinitions.json
+      - echo Writing image definitions file...
+      - printf '[{"name”:"learnify","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > container-image.json
+artifacts:
+  files: imagedefinitions.json
 
 
 
