@@ -23,7 +23,7 @@ phases:
 #      - echo Writing image definitions file...
 #      - printf '[{"name”:"learnify","image":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > container-image.json
 #artifacts:
-#  files: container-image.json
+##  files: container-image.json
 
 
 
